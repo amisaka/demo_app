@@ -6,3 +6,7 @@ print " with no line breaks."
 
 printf("\n\nprintf formats numbers like %7.2f, and
 strings like %s.",3.14156,"me")
+
+puts "What is your name?"
+$name = STDIN.gets
+puts "Hi "+$name
