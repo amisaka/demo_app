@@ -1,0 +1,22 @@
+name: GitLabSync
+
+on: 
+  - push
+  - delete
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    name: Git Repo Sync
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+    - uses: amisaka/git-repo-sync@v0.1.0
+      with:
+        # Such as https://github.com/amisaka/git-repo-sync.git
+        target-url: ${{ secrets.TARGET_URL }}
+        # Such as amisaka
+        target-username: ${{ secrets.TARGET_USER }}
+        # You can store token in your project's 'Setting > Secrets' and reference the name here. Such as ${{ secrets.ACCESS_TOKEN }}
+        target-token: ${{ secrets.ACESS_TOKEN }}
