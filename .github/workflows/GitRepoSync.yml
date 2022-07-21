@@ -19,4 +19,4 @@ jobs:
         # Such as amisaka
         target-username: ${{ secrets.TARGET_USER }}
         # You can store token in your project's 'Setting > Secrets' and reference the name here. Such as ${{ secrets.ACCESS_TOKEN }}
-        target-token: ${{ secrets.ACESS_TOKEN }}
+        target-token: ${{ secrets.ACCESS_TOKEN }}
